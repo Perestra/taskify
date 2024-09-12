@@ -1,11 +1,8 @@
-import './App.css'
+import Routers from './Routers'
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      
-    </>
+    <Routers/>
   )
 }
 
