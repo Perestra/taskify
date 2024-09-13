@@ -1,0 +1,28 @@
+.task {
+    display: flex;
+    align-items: center;
+    gap: 15px;      
+    margin: 15px 10px;  
+
+    &__name { 
+        width: 100%;
+        height: auto;
+
+        color: var(--textPrimary);
+        font-size: 1rem;
+        font-weight: 500;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__icon {
+        width: 27px;
+        height: 27px;
+        color: var(--textTertiary);
+        cursor: pointer;
+    }
+}
+
+    
