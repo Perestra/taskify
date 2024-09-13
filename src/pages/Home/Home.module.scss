@@ -1,0 +1,58 @@
+.main {
+    width: 100%;
+    height: auto;
+
+    &__section {
+        width: 100%;
+        max-width: 510px;
+        height: auto;
+        
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 10px;
+        
+        margin: auto;
+        background-color: var(--quarternary);
+        border: 2px solid var(--tertiary); 
+        border-radius: 5px;
+    }
+
+    &__iconDiv {
+        display: flex;
+        background: none;
+        border: none;
+        border-right: 2px solid var(--tertiary);
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        margin: 10px;
+        color: var(--textSecondary);
+        cursor: pointer;
+    }
+
+    &__form {
+        width: 100%;
+        height: auto;
+    }
+
+    &__input {
+        width: 100%;
+        height: auto;
+
+        border: none;
+        outline: none;
+        background: none;
+
+        color: var(--textPrimary);
+        font-size: 1.125rem;
+
+        &::placeholder {
+            color: var(--textSecondary);
+            font-size: 1.125rem;
+        }
+    }
+}
