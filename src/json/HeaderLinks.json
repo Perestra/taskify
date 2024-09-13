@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Todas",
+        "url": "/"
+    },
+    {
+        "id": 2,
+        "name": "Completas",
+        "url": "/completas"
+    },
+    {
+        "id": 3,
+        "name": "Ativas",
+        "url": "/ativas"
+    }
+]
