@@ -1,11 +1,11 @@
 import React from 'react'
 
 type Props = {
-  btnClass: string;
+  btnClass?: string;
   text?: string;
   icon?: React.ElementType;
   type: 'button' | 'submit' | 'reset';
-  iconClass: string;
+  iconClass?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
