@@ -1,11 +1,17 @@
-import { BrowserRouter, Routes } from "react-router-dom"
-import { CheckBox } from "./components/CheckBox/CheckBox"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import { NavHeader } from "./components/Header/Header"
+import { Home } from "./pages/Home/Home"
+import { Date } from "./components/Date/Date"
 
 const Routers = () => {
   return (
     <BrowserRouter>
-        <Routes>
-        </Routes>
+      <NavHeader />
+      <Date />
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
     </BrowserRouter>
   )
 }
