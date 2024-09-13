@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
 }
 
 :root {
     --primary: #3C424A;
     --secondary: #484F59;
     --tertiary: #2E3238;
+    --quarternary: #343A40;
     --textPrimary: #F1F1F1;
     --textSecondary: #666C75;
     --textTertiary: #A6ADBA;
+    --red: #82103A;
+}
+
+body {
+    background-color: var(--primary);
 }
