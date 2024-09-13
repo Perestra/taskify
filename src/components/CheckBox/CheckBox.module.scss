@@ -1,11 +1,11 @@
 .button {
-    width: 20px;
+    width: 22px;
     height: 20px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
     
-    border: 1px solid var(--tertiary);
+    border: 2px solid var(--tertiary);
     background-color: var(--secondary);
 
     display: flex;
@@ -13,8 +13,8 @@
     justify-content: center;
 
     &__icon {
-        width: 15px;
-        height: 15px;
+        width: 14px;
+        height: 14px;
         color: var(--textPrimary);
     }
 }
