@@ -1,0 +1,20 @@
+.current {
+    width: 100%;
+    height: auto;
+
+    margin: 70px 0;
+    text-align: center;
+
+    &__weekDay {
+        color: var(--textPrimary);
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    &__date {
+        color: var(--textSecondary);
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+}
