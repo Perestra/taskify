@@ -1,7 +1,7 @@
-import style from './Home.module.scss'
+import style from './AllTasks.module.scss'
 import { TaskList } from '../../components/TaskList/TaskList'
 
-export const Home = () => {
+export const AllTasks = () => {
   return (
     <main className={ style.main }>
       <TaskList />

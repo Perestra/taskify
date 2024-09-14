@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { TaskProvider } from "./contexts/TaskContext"
-import { RouterHeader } from "./RouterHeader/RouterHeader"
-import { Home } from "./pages/Home/Home"
+import { HeaderRouter } from "./components/HeaderRouter/HeaderRouter"
+import { AllTasks } from "./pages/AllTasks/AllTasks"
 
 const Routers = () => {
   return (
     <BrowserRouter>
-      <RouterHeader/>
+      <HeaderRouter/>
       <TaskProvider>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<AllTasks />} />
         </Routes>
       </TaskProvider>
     </BrowserRouter>
