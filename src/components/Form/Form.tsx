@@ -16,12 +16,14 @@ export const Form = () => {
   return (
     <section className={ style.section }>
         <div className={ style.section__container }>
-            <Button 
-                btnClass={ style.section__iconDiv }
-                iconClass={ style.section__icon }
-                type='button' 
-                icon={FiCheckSquare}
-            />
+            <div className={ style.section__btn }>
+                <Button 
+                    btnClass={ style.section__iconDiv }
+                    iconClass={ style.section__icon }
+                    type='button' 
+                    icon={FiCheckSquare}
+                />
+            </div>
             <form className={ style.section__form } onSubmit={onSubmitHandler}>
                 <input className={ style.section__input } 
                     type="text"
