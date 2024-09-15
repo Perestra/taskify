@@ -5,18 +5,26 @@ import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { TaskAction } from '../TaskAction/TaskAction';
 import { useState } from 'react';
 
-export const Task = () => {
+type Props = {
+  text: string;
+  id: string;
+  isDone: boolean;
+}
+
+export const Task = ({ text, id, isDone }: Props) => {
 
   const [dialogActive, setDialogActive] = useState(false)
 
   return (
-    <div className={ style.task }>
-      <CheckBox />
-      <span className={ style.task__name }>Comer arroz e carne moidaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
-      <div className={ style.task__action }>
-        <HiOutlineDotsHorizontal className={ style.task__icon } onClick={() => setDialogActive(!dialogActive)}/>
-        <TaskAction open={dialogActive} />
+    <li className={ style.task }>
+      <div className={ style.task__container }>
+        <CheckBox id={id} isDone={isDone} />
+        <span className={ style.task__name }>{text}</span>
+        <div className={ style.task__action }>
+          <HiOutlineDotsHorizontal className={ style.task__icon } onClick={() => setDialogActive(!dialogActive)}/>
+          <TaskAction open={dialogActive} id={id} />
+        </div>
       </div>
-    </div>
+    </li>
   )
 }
