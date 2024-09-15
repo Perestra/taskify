@@ -1,10 +1,11 @@
-import style from './AllTasks.module.scss'
 import { TaskList } from '../../components/TaskList/TaskList'
+import { useTaskContext } from '../../hooks/useTaskContext'
 
 export const AllTasks = () => {
+
+  const { tasks } = useTaskContext()
+
   return (
-    <main className={ style.main }>
-      <TaskList />
-    </main>
+    <TaskList taskList={tasks} />
   )
 }
