@@ -3,8 +3,8 @@ import { TaskObject } from '../types/TaskItem'
 import useLocalStorage from "use-local-storage";
 
 type TaskContextType = {
-    task: TaskObject[];
-    setTask: React.Dispatch<React.SetStateAction<TaskObject[]>>;
+    tasks: TaskObject[];
+    setTasks: React.Dispatch<React.SetStateAction<TaskObject[]>>;
 }
 
 type Props = {
@@ -15,10 +15,10 @@ const TaskContext = createContext<TaskContextType | undefined>(undefined)
 
 const TaskProvider = ({ children }: Props) => {
 
-    const [task, setTask] = useLocalStorage<TaskObject[]>('Task',[]) as [TaskObject[], React.Dispatch<React.SetStateAction<TaskObject[]>>];
+    const [tasks, setTasks] = useLocalStorage<TaskObject[]>('Task',[]) as [TaskObject[], React.Dispatch<React.SetStateAction<TaskObject[]>>];
 
     return (
-        <TaskContext.Provider value={{ task, setTask }}>
+        <TaskContext.Provider value={{ tasks, setTasks }}>
             { children }
         </TaskContext.Provider>
     )
