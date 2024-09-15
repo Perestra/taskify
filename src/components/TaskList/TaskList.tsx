@@ -1,11 +1,22 @@
 import style from './TaskList.module.scss'
 
-import { Task } from '../Task/Task'
+import { TaskObject } from '../../types/TaskItem'
+import { Task } from '../Task/Task';
 
-export const TaskList = () => {
+type Props = {
+  taskList: TaskObject[];
+}
+
+export const TaskList = ({ taskList }: Props) => {
   return (
-    <article className={ style.article }>
-        <Task />
-    </article>
+    <main className={ style.main }>
+      { taskList.length > 0 && 
+        <article className={ style.main__article }>
+          <ul className={ style.main__ul }>
+            {taskList.map( task => <Task key={ task.id } id={ task.id } isDone={ task.isDone } text={ task.name } /> )}
+          </ul>
+        </article>
+      }
+    </main>
   )
 }
