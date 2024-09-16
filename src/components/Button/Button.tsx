@@ -15,6 +15,7 @@ export const Button = ({ btnClass, text, icon: Icon, type, iconClass, onClick }:
       className={ btnClass }
       aria-label={ text }
       type={ type }
+      value={ text }
       onClick={ onClick }
     >
       {Icon && <Icon className={ iconClass } />}
