@@ -22,7 +22,7 @@ export const Form = () => {
             <div className={ style.section__btn }>
                 <Button 
                     btnClass={ style.section__iconDiv }
-                    iconClass={ style.section__icon }
+                    iconClass={ `${style.section__icon} ${RemainingTasks() === 0 && style.section__iconActive}` }
                     type='button' 
                     icon={FiCheckSquare}
                     onClick={ () => setAllTasksCompleted() }

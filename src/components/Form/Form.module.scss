@@ -16,7 +16,6 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        gap: 10px;
         
         margin: 0 20px;
         background-color: var(--quarternary);
@@ -46,6 +45,10 @@
         cursor: pointer;
     }
 
+    &__iconActive {
+        color: var(--red);
+    }
+
     &__form {
         width: 100%;
         height: auto;
@@ -55,6 +58,7 @@
         width: 100%;
         height: auto;
 
+        padding: 0 10px;
         border: none;
         outline: none;
         background: none;
