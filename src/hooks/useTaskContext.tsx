@@ -33,6 +33,13 @@ export const useTaskContext = () => {
         setTasks(tasks.filter( task => id !== task.id ))
     }
 
+    const editTask = (id: string, newName: string) => {
+        const index = tasks.findIndex( task => id === task.id )
+        const spreadTask = [...tasks]
+        newName.trim().length > 0? spreadTask[index].name =  newName.trim(): spreadTask[index].name
+        setTasks( spreadTask )
+    }
+
     const cleanCompletedTasks = () => {
         setTasks(tasks.filter( task => !task.isDone ))        
     }
@@ -48,5 +55,14 @@ export const useTaskContext = () => {
         setTasks( spreadTask )
     }
 
-    return { tasks, setTasks, RemainingTasks, addTask, deleteTask, cleanCompletedTasks, setAllTasksCompleted, isDoneToggle }
+    const setIsDoneFalse = (id: string) => {
+        const index = tasks.findIndex( task => task.id === id )
+        const spreadTask = [...tasks]
+        if(spreadTask[index].isDone) {
+            spreadTask[index].isDone = false
+            setTasks( spreadTask )
+        }
+    }
+
+    return { tasks, setTasks, RemainingTasks, addTask, deleteTask, editTask, cleanCompletedTasks, setAllTasksCompleted, isDoneToggle, setIsDoneFalse }
 }
