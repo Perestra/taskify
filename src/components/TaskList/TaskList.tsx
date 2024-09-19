@@ -10,6 +10,7 @@ type Props = {
 export const TaskList = ({ taskList }: Props) => {
   return (
     <main className={ style.main }>
+      {taskList.length <= 0 && <span className={ style.main__noTask }>Não há nenhuma tarefa...</span>}
       { taskList.length > 0 && 
         <article className={ style.main__article }>
           <ul className={ style.main__ul }>
