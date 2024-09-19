@@ -35,6 +35,8 @@ export const Task = ({ id, text, isDone }: Props) => {
       <div className={ `${style.task__container} ${isEditable && style.task__nameEditable}` }>
         <CheckBox id={id} isDone={isDone} />
         <input 
+          name='task'
+          id='name'
           className={ `${style.task__name} ${ isDone && style.task__Completed}` } 
           type="text" 
           value={isNameChanged(text, newTask)} 
