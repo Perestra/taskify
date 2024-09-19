@@ -29,7 +29,10 @@ export const Form = () => {
                 />
             </div>
             <form className={ style.section__form } onSubmit={onSubmitHandler}>
-                <input className={ style.section__input } 
+                <input 
+                    name='add_task' 
+                    id='task'
+                    className={ style.section__input } 
                     type="text"
                     value={task}
                     placeholder='Adicione uma tarefa...'
