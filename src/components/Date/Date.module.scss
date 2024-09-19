@@ -2,19 +2,34 @@
     width: 100%;
     height: auto;
 
-    margin: 70px 0;
+    margin: 70px 0px;
+    padding: 0 10px;
     text-align: center;
 
     &__weekDay {
         color: var(--textPrimary);
-        font-size: 38px;
+        font-size: 2.375rem;
         font-weight: 600;
     }
 
     &__date {
         color: var(--textSecondary);
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 300;
         margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .current {
+        margin: 50px 0px;
+
+        &__weekDay {
+            font-size: 1.75rem;
+        }
+
+        &__date {
+            font-size: 1rem;
+        }
     }
 }

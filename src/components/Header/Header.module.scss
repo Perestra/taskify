@@ -3,6 +3,7 @@
     height: auto;
 
     border-bottom: 3px solid var(--tertiary);
+    padding: 0px 10px;
 
     &__nav {
         width: 100%;
@@ -20,5 +21,11 @@
 
         gap: 50px;
         list-style: none;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .header {
+
     }
 }

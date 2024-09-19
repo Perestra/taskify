@@ -9,7 +9,7 @@ type Link = {
     url: string;
 }
 
-export const NavHeader = () => {
+export const Header = () => {
     return (
         <header className={ style.header }>
             <nav className={ style.header__nav }>

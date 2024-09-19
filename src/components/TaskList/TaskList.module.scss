@@ -1,11 +1,28 @@
 .main {
     width: 100%;
     height: auto;
+    padding: 0 10px;
+
+    text-align: center;
+
+    &__noTask {
+        color: var(--textPrimary);
+        font-size: 1rem;
+        font-weight: 500;
+    }
 
     &__article {
         width: 100%;
         max-width: 510px;
         height: auto;
         margin: auto;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .main {
+        &__noTask {
+            font-size: 0.875rem;
+        }    
     }
 }

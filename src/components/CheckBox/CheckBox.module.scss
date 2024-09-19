@@ -18,3 +18,9 @@
         color: var(--textPrimary);
     }
 }
+
+@media screen and (max-width:530px) {
+    .button {
+        width: 25px;
+    }
+}

@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './Date.module.scss'
 
 import { weekDay, month, day, year } from '../../helpers/getCurrentDate';

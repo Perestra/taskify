@@ -1,6 +1,6 @@
 .task {
     list-style: none;
-    
+    transition: all ease-in-out 0.2s;
 
     &:hover {
         background: var(--secondary);
@@ -10,26 +10,50 @@
         display: flex;
         align-items: center;
         gap: 15px;      
-        padding: 15px 10px; 
+        padding: 10px 10px 10px 15px; 
         border-bottom: 1px solid var(--tertiary);
+    }
+
+    &__nameEditable {
+        border-bottom: 1px solid var(--red);
     }
 
     &__name { 
         width: 100%;
         height: auto;
 
-        color: var(--textPrimary);
-        font-size: 1rem;
-        font-weight: 500;
-
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+
+        background: none;
+        outline: none;
+        border: none;
+
+        &[value] {
+            color: var(--textPrimary);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    &__Completed[value] {
+        color: var(--textSecondary);
+        text-decoration: line-through;
     }
 
     &__action {
         display: flex;
         position: relative;
+
+        border-radius: 50%;
+        padding: 5px;
+
+        transition: all ease-in-out 0.2s;
+
+        &:hover {
+            background-color: var(--primary);
+        }
     }
 
     &__icon {
@@ -40,4 +64,10 @@
     }
 }
 
-    
+@media screen and (max-width:530px) {
+    .task {
+        &__name {
+            font-size: 0.875rem;
+        }    
+    }
+}
