@@ -24,6 +24,7 @@ export const Form = () => {
                     btnClass={ style.section__iconDiv }
                     iconClass={ `${style.section__icon} ${RemainingTasks() === 0 && style.section__iconActive}` }
                     type='button' 
+                    title='Completar tarefas'
                     icon={FiCheckSquare}
                     onClick={ () => setAllTasksCompleted() }
                 />
@@ -45,6 +46,7 @@ export const Form = () => {
                 btnClass={ style.section__clean }
                 text='Limpar completas'
                 type='button' 
+                title='Limpar tarefas completas'
                 onClick={ () => cleanCompletedTasks()  }
             />
             <span className={ style.section__remaining }>{RemainingTasks()} Tarefas restantes</span>
