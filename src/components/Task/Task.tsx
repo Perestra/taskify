@@ -6,6 +6,7 @@ import { LuCheck } from "react-icons/lu";
 import { TaskAction } from '../TaskAction/TaskAction';
 import { useState } from 'react';
 import { useTaskContext } from '../../hooks/useTaskContext';
+import { Button } from '../Button/Button';
 
 type Props = {
   id: string;
@@ -43,12 +44,24 @@ export const Task = ({ id, text, isDone }: Props) => {
           contentEditable={isEditable} 
           onChange={ event => setNewTask(event.target.value) } 
         />
-        <div className={ style.task__action }>
-          {!isEditable && <HiOutlineDotsHorizontal className={ style.task__icon } onClick={() => setDialogActive(!dialogActive)}/>}
-          {isEditable && <LuCheck className={ style.task__icon } onClick={() => editNameTask(id, newTask)}/>}
-          <TaskAction open={dialogActive} id={id} name={newTask} setIsEditable={setIsEditable} setDialogActive={setDialogActive} />
-        </div>
+        { !isEditable && <Button 
+          btnClass={ style.task__action }
+          iconClass={ style.task__icon }
+          type='button'
+          title='Configurações'
+          icon={HiOutlineDotsHorizontal}
+          onClick={() => setDialogActive(!dialogActive)}
+        />}
+        { isEditable && <Button 
+          btnClass={ style.task__action }
+          iconClass={ style.task__icon }
+          type='button'
+          title='Confirmar edição'
+          icon={LuCheck}
+          onClick={() => editNameTask(id, newTask)}
+        />}
       </div>
+      <TaskAction open={dialogActive} id={id} name={newTask} setIsEditable={setIsEditable} setDialogActive={setDialogActive} /> {/*open={dialogActive}*/}
     </li>
   )
 }
