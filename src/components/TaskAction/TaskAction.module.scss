@@ -1,6 +1,9 @@
 .dialog {
     position: absolute;
-    left:408px;
+    // left: 408px;
+    // bottom: 50px;
+
+    left: -53px;
     bottom: 50px;
 
     width: 100px;
@@ -88,8 +91,8 @@
     }
 }
 
-@media screen and (max-width: 510px) {
-    .dialog {
-        left: 255px;
-    }
-}
+// @media screen and (max-width: 510px) {
+//     .dialog {
+//         left: px;
+//     }
+// }

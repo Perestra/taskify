@@ -44,24 +44,26 @@ export const Task = ({ id, text, isDone }: Props) => {
           contentEditable={isEditable} 
           onChange={ event => setNewTask(event.target.value) } 
         />
-        { !isEditable && <Button 
-          btnClass={ style.task__action }
-          iconClass={ style.task__icon }
-          type='button'
-          title='Configurações'
-          icon={HiOutlineDotsHorizontal}
-          onClick={() => setDialogActive(!dialogActive)}
-        />}
-        { isEditable && <Button 
-          btnClass={ style.task__action }
-          iconClass={ style.task__icon }
-          type='button'
-          title='Confirmar edição'
-          icon={LuCheck}
-          onClick={() => editNameTask(id, newTask)}
-        />}
+        <div className={ style.task__settings }>
+          { !isEditable && <Button 
+            btnClass={ style.task__action }
+            iconClass={ style.task__icon }
+            type='button'
+            title='Configurações'
+            icon={HiOutlineDotsHorizontal}
+            onClick={() => setDialogActive(!dialogActive)}
+          />}
+          { isEditable && <Button 
+            btnClass={ style.task__action }
+            iconClass={ style.task__icon }
+            type='button'
+            title='Confirmar edição'
+            icon={LuCheck}
+            onClick={() => editNameTask(id, newTask)}
+          />}
+          <TaskAction open={dialogActive} id={id} name={newTask} setIsEditable={setIsEditable} setDialogActive={setDialogActive} /> 
+        </div>
       </div>
-      <TaskAction open={dialogActive} id={id} name={newTask} setIsEditable={setIsEditable} setDialogActive={setDialogActive} /> {/*open={dialogActive}*/}
     </li>
   )
 }
