@@ -1,0 +1,32 @@
+.main {
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+    
+    margin: 70px auto;
+    text-align: center;
+
+    &__title {
+        font-size: 7rem;
+        font-weight: 800;
+        color: var(--textPrimary);
+    }
+
+    &__description {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--textSecondary);
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .main {
+        &__title {
+            font-size: 4rem;
+        }
+    
+        &__description {
+            font-size: 0.875rem;
+        }
+    }
+}
