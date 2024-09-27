@@ -1,5 +1,6 @@
 import { useTaskContext } from '../../hooks/useTaskContext'
 import { TaskList } from '../../components/TaskList/TaskList'
+import DateInputForm from '../../components/DateInputForm/DateInputForm '
 
 export const ActiveTasks = () => {
 
@@ -7,6 +8,9 @@ export const ActiveTasks = () => {
     const activeTasks = tasks.filter( task => !task.isDone )
 
   return (
-    <TaskList taskList={ activeTasks }/>
+    <>
+      <DateInputForm />
+      <TaskList taskList={ activeTasks }/>
+    </>
   )
 }
