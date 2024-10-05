@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    height: auto;
+
+    border-top: 3px solid var(--tertiary);
+    padding: 10px;
+    text-align: center;
+
+    &__span {
+        color: var(--textTertiary);
+        font-size: 1rem;
+        font-weight: 700;
+
+        & > strong {
+            color: var(--textPrimary);
+        }
+    }
+}
+
+@media screen and (max-width:530px) {
+    .footer {
+        &__span {
+            font-size: 0.875rem;
+        }
+    }
+}

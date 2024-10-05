@@ -2,17 +2,21 @@
     list-style: none;
     transition: all ease-in-out 0.2s;
 
+    border-bottom: 1px solid var(--tertiary);
+
+    &:last-child {
+        border-bottom: none;
+    }
 
     &:hover {
         background: var(--secondary);
     }
-    
+
     &__container {
         display: flex;
         align-items: center;
         gap: 15px;      
         padding: 10px 10px 10px 15px; 
-        border-bottom: 1px solid var(--tertiary);
     }
 
     &__settings {

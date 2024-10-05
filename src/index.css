@@ -8,6 +8,14 @@
     font-family: "Inter", sans-serif;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 :root {
     --primary: #3C424A;
     --secondary: #484F59;

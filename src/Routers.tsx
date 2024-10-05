@@ -5,6 +5,7 @@ import { AllTasks } from "./pages/AllTasks/AllTasks"
 import { ActiveTasks } from "./pages/ActiveTasks/ActiveTasks"
 import { CompletedTasks } from "./pages/CompletedTasks/CompletedTasks"
 import { NotFound } from "./pages/NotFound/NotFound"
+import { Footer } from "./components/Footer/Footer"
 
 const Routers = () => {
   return (
@@ -17,6 +18,7 @@ const Routers = () => {
             <Route path="ativas" element={<ActiveTasks />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+        {/* <Footer /> */}
       </TaskProvider>
     </BrowserRouter>
   )
